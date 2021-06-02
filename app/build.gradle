@@ -56,6 +56,12 @@ dependencies {
     implementation 'org.tensorflow:tensorflow-lite-support:0.1.0-rc1'
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0-rc1'
 
+    // If you want to use the base sdk
+    implementation 'com.google.mlkit:pose-detection:17.0.1-beta3'
+    // If you want to use the accurate sdk
+    implementation 'com.google.mlkit:pose-detection-accurate:17.0.1-beta3'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
+
     // Import for CameraX
     def camerax_version = "1.0.0-beta10"
     // CameraX core library using camera2 implementation

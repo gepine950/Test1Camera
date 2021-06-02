@@ -24,9 +24,21 @@ MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\wieho\.gradle\caches\t
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\5c9a905dbbd31515f15dc99e2c4242ff\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\d5575cc079fc8ddf60d624611f44326f\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0-rc1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\22dc2ccbf17de0d4a56cfefb9d537e61\jetified-tensorflow-lite-support-0.1.0-rc1\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.mlkit:pose-detection:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\9a785f00b88d6da52ec7bbf4794a0bad\jetified-pose-detection-17.0.1-beta3\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.mlkit:pose-detection-accurate:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\e2b3fa14b21a5fb8c3a97c3dcfd18582\jetified-pose-detection-accurate-17.0.1-beta3\AndroidManifest.xml:2:1-9:12
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c84ff639c1feab89eb2404002aa29b6c\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.camera:camera-camera2:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a3fe6aa5dfcc3aa43d08ef1680749e88\jetified-camera-camera2-1.0.0-beta10\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1a05d06ea7a8169ca7775b7ea0ae97ec\jetified-camera-lifecycle-1.0.0-beta10\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dc48ba1a284341ee627200960374c765\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.mlkit:mediapipe-internal:17.0.0-beta1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\b94d00cc35cbc1a34afd550db1df8d65\jetified-mediapipe-internal-17.0.0-beta1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\f548a8558e19e22521574343bfbdd63f\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\881b23a8b88595132ca30ffbb211c6de\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\152a24da0c1ff4873abd3d0c606dd080\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd5d3fd3e2e69c4d110df99506cf46c0\fragment-1.3.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\099506bba1ea095ac9e4b3805ce7a7a8\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\4d17df9ca4c87198663a8505dd23f92a\jetified-activity-1.2.3\AndroidManifest.xml:17:1-24:12
@@ -58,10 +70,15 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\wieho\.gradle\caches\trans
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\6060af7c79131a9a4b113a064460d25b\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\14b9812f8a3e829171d161b8f4677d9b\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c43a6b6d6ccf354db93fca7909f31309\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\32bf8ff6aab603efa8343204186b1310\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a69f70f89212645d1457fb0793f019f5\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\44bbb881635125b269716309878fb54a\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\ebfac4e4c1012a166202e4c4ddc8bdc1\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd8f6341ff63f8a409e7de23107a4d69\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2341b05d2555045e91936358dab454ca\jetified-transport-api-2.2.1\AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\18a1e09c045b90bb1a7ce15d53bfb9ab\jetified-firebase-encoders-json-17.1.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1fee1a785c1c6f880ad5664f1978bb58\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\270ff6cc5f3cae240cd4d9a8638df02b\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:2:1-12:12
 INJECTED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml:2:1-26:12
@@ -97,12 +114,38 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\wieho\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\90a09e06d155f3c8b1250bdc2a9e4990\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\d5575cc079fc8ddf60d624611f44326f\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\d5575cc079fc8ddf60d624611f44326f\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.mlkit:pose-detection:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\9a785f00b88d6da52ec7bbf4794a0bad\jetified-pose-detection-17.0.1-beta3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.mlkit:pose-detection:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\9a785f00b88d6da52ec7bbf4794a0bad\jetified-pose-detection-17.0.1-beta3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.mlkit:pose-detection-accurate:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\e2b3fa14b21a5fb8c3a97c3dcfd18582\jetified-pose-detection-accurate-17.0.1-beta3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.mlkit:pose-detection-accurate:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\e2b3fa14b21a5fb8c3a97c3dcfd18582\jetified-pose-detection-accurate-17.0.1-beta3\AndroidManifest.xml:7:5-20
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c84ff639c1feab89eb2404002aa29b6c\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c84ff639c1feab89eb2404002aa29b6c\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\f548a8558e19e22521574343bfbdd63f\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\f548a8558e19e22521574343bfbdd63f\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\881b23a8b88595132ca30ffbb211c6de\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\881b23a8b88595132ca30ffbb211c6de\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\152a24da0c1ff4873abd3d0c606dd080\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\152a24da0c1ff4873abd3d0c606dd080\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.5.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\8303caa4e5d6b7b04220c6cd65e7567c\core-1.5.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.5.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\8303caa4e5d6b7b04220c6cd65e7567c\core-1.5.0\AndroidManifest.xml:24:5-89
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\658302cea86d284b1bfdb99077fab3f0\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\658302cea86d284b1bfdb99077fab3f0\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\45d21530b00f0042f7a6f50235bae18f\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\45d21530b00f0042f7a6f50235bae18f\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:25:5-39:19
 MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\270ff6cc5f3cae240cd4d9a8638df02b\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:10:5-20
 MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\270ff6cc5f3cae240cd4d9a8638df02b\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:10:5-20
 	android:appComponentFactory
@@ -179,12 +222,36 @@ MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\wieho\.gradle\cach
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\d5575cc079fc8ddf60d624611f44326f\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0-rc1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\22dc2ccbf17de0d4a56cfefb9d537e61\jetified-tensorflow-lite-support-0.1.0-rc1\AndroidManifest.xml:4:5-44
 MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0-rc1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\22dc2ccbf17de0d4a56cfefb9d537e61\jetified-tensorflow-lite-support-0.1.0-rc1\AndroidManifest.xml:4:5-44
+MERGED from [com.google.mlkit:pose-detection:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\9a785f00b88d6da52ec7bbf4794a0bad\jetified-pose-detection-17.0.1-beta3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:pose-detection:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\9a785f00b88d6da52ec7bbf4794a0bad\jetified-pose-detection-17.0.1-beta3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:pose-detection-accurate:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\e2b3fa14b21a5fb8c3a97c3dcfd18582\jetified-pose-detection-accurate-17.0.1-beta3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:pose-detection-accurate:17.0.1-beta3] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\e2b3fa14b21a5fb8c3a97c3dcfd18582\jetified-pose-detection-accurate-17.0.1-beta3\AndroidManifest.xml:5:5-44
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c84ff639c1feab89eb2404002aa29b6c\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c84ff639c1feab89eb2404002aa29b6c\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:7:5-8:41
 MERGED from [androidx.camera:camera-camera2:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a3fe6aa5dfcc3aa43d08ef1680749e88\jetified-camera-camera2-1.0.0-beta10\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.camera:camera-camera2:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a3fe6aa5dfcc3aa43d08ef1680749e88\jetified-camera-camera2-1.0.0-beta10\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1a05d06ea7a8169ca7775b7ea0ae97ec\jetified-camera-lifecycle-1.0.0-beta10\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta10] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1a05d06ea7a8169ca7775b7ea0ae97ec\jetified-camera-lifecycle-1.0.0-beta10\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dc48ba1a284341ee627200960374c765\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dc48ba1a284341ee627200960374c765\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:mediapipe-internal:17.0.0-beta1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\b94d00cc35cbc1a34afd550db1df8d65\jetified-mediapipe-internal-17.0.0-beta1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:mediapipe-internal:17.0.0-beta1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\b94d00cc35cbc1a34afd550db1df8d65\jetified-mediapipe-internal-17.0.0-beta1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\f548a8558e19e22521574343bfbdd63f\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\f548a8558e19e22521574343bfbdd63f\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\881b23a8b88595132ca30ffbb211c6de\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\881b23a8b88595132ca30ffbb211c6de\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\152a24da0c1ff4873abd3d0c606dd080\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\152a24da0c1ff4873abd3d0c606dd080\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd5d3fd3e2e69c4d110df99506cf46c0\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd5d3fd3e2e69c4d110df99506cf46c0\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\099506bba1ea095ac9e4b3805ce7a7a8\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
@@ -247,6 +314,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\wieho\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\14b9812f8a3e829171d161b8f4677d9b\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c43a6b6d6ccf354db93fca7909f31309\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\c43a6b6d6ccf354db93fca7909f31309\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\32bf8ff6aab603efa8343204186b1310\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\32bf8ff6aab603efa8343204186b1310\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a69f70f89212645d1457fb0793f019f5\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\a69f70f89212645d1457fb0793f019f5\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\44bbb881635125b269716309878fb54a\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -255,6 +324,14 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\ebfac4e4c1012a166202e4c4ddc8bdc1\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd8f6341ff63f8a409e7de23107a4d69\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fd8f6341ff63f8a409e7de23107a4d69\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2341b05d2555045e91936358dab454ca\jetified-transport-api-2.2.1\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2341b05d2555045e91936358dab454ca\jetified-transport-api-2.2.1\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\18a1e09c045b90bb1a7ce15d53bfb9ab\jetified-firebase-encoders-json-17.1.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\18a1e09c045b90bb1a7ce15d53bfb9ab\jetified-firebase-encoders-json-17.1.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1fee1a785c1c6f880ad5664f1978bb58\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\1fee1a785c1c6f880ad5664f1978bb58\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\270ff6cc5f3cae240cd4d9a8638df02b\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:7:5-8:41
@@ -269,4 +346,99 @@ INJECTED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\Han
 		INJECTED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml
 		MERGED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml
+		MERGED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\wieho\Downloads\Hand-Camera-master\Hand-Camera-master\HandCamera1\app\src\main\AndroidManifest.xml
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
+ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:15:9-23:19
+MERGED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:15:9-23:19
+	android:exported
+		ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:10:13-37
+	tools:targetApi
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:19:13-32
+	android:directBootAware
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:17:13-43
+	android:name
+		ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:9:13-91
+meta-data#com.google.firebase.components:com.google.mlkit.vision.pose.internal.PoseRegistrar
+ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.mlkit:pose-detection-common:17.1.0-beta2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\acb93792089b9e96b426025815f55c55\jetified-pose-detection-common-17.1.0-beta2\AndroidManifest.xml:12:17-114
+meta-data#com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar
+ADDED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-common:16.3.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\2294e392b2db3c143c7490ddfaa5bdd5\jetified-vision-common-16.3.0\AndroidManifest.xml:13:17-124
+provider#com.google.mlkit.common.internal.MlKitInitProvider
+ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:9:9-13:38
+	android:authorities
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:11:13-69
+	android:exported
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:13:13-35
+	android:name
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:10:13-78
+meta-data#com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar
+ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.mlkit:common:17.1.1] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\7e9ffdc0e01c7fad0148e860f927d068\jetified-common-17.1.1\AndroidManifest.xml:21:17-120
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\3d11400d15596958586ba4df41d750ea\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\fe99e7f9e67fb753fbd0aa6dc273f46f\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:25:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:26:22-64
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\dcf0feda4b5fa8e5dbba3601affadb85\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\wieho\.gradle\caches\transforms-2\files-2.1\0bf31f3b82f13a36e6cbb498a5f6b090\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
