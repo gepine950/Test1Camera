@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HandCamera1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="camera">Camera</string>
+    <string name="word_result">Word Result</string>
+    <string name="permission_deny_text">Required permissions denied. Exiting…</string>
+</resources>
