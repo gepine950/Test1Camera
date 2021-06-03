@@ -7,16 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.handcamera1.databinding.ItemRowBinding
 
-class DictionaryAdapter : RecyclerView.Adapter<DictionaryAdapter.AViewHolder>() {
-    private val listDct = ArrayList<Dictionary>()
-
-    private lateinit var binding: ItemRowBinding
+class DictionaryAdapter(private val listDct: ArrayList<Dictionary> = ArrayList<Dictionary>()) : RecyclerView.Adapter<DictionaryAdapter.AViewHolder>() {
 
     inner class AViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvAlphaNum: TextView = binding.textView
-        var imgPhoto: ImageView = binding.imageView
+        var tvAlphaNum: TextView = itemView.findViewById(R.id.tv_alphanum)
+        var imgPhoto: ImageView = itemView.findViewById(R.id.sign_image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AViewHolder {

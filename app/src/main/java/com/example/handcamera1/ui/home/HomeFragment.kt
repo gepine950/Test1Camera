@@ -90,9 +90,10 @@ class HomeFragment : Fragment() {
             // Select back camera as a default
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
+            // image analyze to model
             val imageAnalysis = ImageAnalysis.Builder()
                     .setTargetResolution(Size(64, 64))
-                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
                     .build()
 
             imageAnalysis.setAnalyzer(cameraExecutor, ImageAnalysis.Analyzer { image ->
@@ -134,7 +135,6 @@ class HomeFragment : Fragment() {
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
     }
-
 }
 
 private class ImageAnalyzerz(ctx: Context) : ImageAnalysis.Analyzer {
@@ -189,16 +189,16 @@ private class ImageAnalyzerz(ctx: Context) : ImageAnalysis.Analyzer {
             imageBitmap?.let { Bitmap.createScaledBitmap(it, inputImageWidth, inputImageHeight, true) }
 
         val imageBuffer = resizedImage?.let { convertBitmapToByteBuffer(it) }
-
-        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 64, 64, 3), DataType.FLOAT32)
-        if (imageBuffer != null) {
-            inputFeature0.loadBuffer(imageBuffer)
-        }
-
-        val outputs = signModel.process(inputFeature0)
-                .outputFeature0AsTensorBuffer
-
-        Log.d(TAG, outputs.toString())
+//
+//        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 64, 64, 3), DataType.FLOAT32)
+////        if (imageBuffer != null) {
+////            inputFeature0.loadBuffer(imageBuffer)
+////        }
+//
+//        val outputs = signModel.process(inputFeature0)
+//                .outputFeature0AsTensorBuffer
+//
+//        Log.d(TAG, outputs.toString())
 
         image.close()
     }
