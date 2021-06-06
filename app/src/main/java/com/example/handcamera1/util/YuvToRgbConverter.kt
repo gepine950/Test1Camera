@@ -6,7 +6,7 @@ import android.graphics.ImageFormat
 import android.graphics.Rect
 import android.media.Image
 import android.renderscript.*
-import com.example.handcamera1.BuildConfig
+import androidx.viewbinding.BuildConfig
 import java.nio.ByteBuffer
 
 class YuvToRgbConverter(context: Context) {

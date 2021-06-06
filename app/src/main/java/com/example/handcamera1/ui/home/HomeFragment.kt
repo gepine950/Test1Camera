@@ -190,15 +190,15 @@ private class ImageAnalyzerz(ctx: Context) : ImageAnalysis.Analyzer {
 
         val imageBuffer = resizedImage?.let { convertBitmapToByteBuffer(it) }
 //
-//        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 64, 64, 3), DataType.FLOAT32)
-////        if (imageBuffer != null) {
-////            inputFeature0.loadBuffer(imageBuffer)
-////        }
-//
-//        val outputs = signModel.process(inputFeature0)
-//                .outputFeature0AsTensorBuffer
-//
-//        Log.d(TAG, outputs.toString())
+        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 64, 64, 3), DataType.FLOAT32)
+//        if (imageBuffer != null) {
+//            inputFeature0.loadBuffer(imageBuffer)
+//        }
+
+        val outputs = signModel.process(inputFeature0)
+                .outputFeature0AsTensorBuffer
+
+        Log.d(TAG, outputs.toString())
 
         image.close()
     }
