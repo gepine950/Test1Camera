@@ -5,4 +5,4 @@ data class Dictionary(
     var photo: Int = 0
 )
 
-// 64
+// 62

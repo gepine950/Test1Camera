@@ -19,22 +19,49 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import java.nio.ByteBuffer
 import java.util.concurrent.Executors
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.Preview
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.example.handcamera1.databinding.FragmentHomeBinding
-import com.example.handcamera1.ml.SignLanguage
+import com.example.handcamera1.detection.Recognition
+import com.example.handcamera1.detection.RecognitionAdapter
+import com.example.handcamera1.detection.RecognitionListViewModel
+import com.example.handcamera1.ml.SignLanguange
 import com.example.handcamera1.util.YuvToRgbConverter
-import org.tensorflow.lite.DataType
-import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
-import java.nio.ByteOrder
-import java.util.concurrent.ExecutorService
+import org.tensorflow.lite.gpu.CompatibilityList
+import org.tensorflow.lite.support.image.TensorImage
+import org.tensorflow.lite.support.model.Model
+
+// Constants
+private const val MAX_RESULT_DISPLAY = 3 // Maximum number of results displayed
+private const val REQUEST_CODE_PERMISSIONS = 999 // Return code after asking for permission
+private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA) // permission needed
+
+// Listener for the result of the ImageAnalyzer
+typealias RecognitionListener = (recognition: List<Recognition>) -> Unit
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
-    private lateinit var cameraExecutor: ExecutorService
+    // CameraX variables
+    private lateinit var imageAnalyzer: ImageAnalysis // Analysis use case, for running ML code
+    private lateinit var camera: Camera
+    private val cameraExecutor = Executors.newSingleThreadExecutor()
+
+    // Views attachment
+    private val resultRecyclerView by lazy {
+        binding.recognitionResults
+    }
+    private val viewFinder by lazy {
+        binding.viewFinder
+    }
+
+    // Contains the recognition result. Since  it is a viewModel, it will survive screen rotations
+    private val recogViewModel: RecognitionListViewModel by viewModels()
+
     private lateinit var binding: FragmentHomeBinding
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -47,16 +74,33 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Request camera permissions
+        // Request camera permissions
         if (allPermissionsGranted()) {
             startCamera()
         } else {
             activity?.let {
                 ActivityCompat.requestPermissions(
-                        it, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
+                    it, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
+                )
             }
         }
 
-        cameraExecutor = Executors.newSingleThreadExecutor()
+        // Initialising the resultRecyclerView and its linked viewAdaptor
+        val viewAdapter = activity?.let { RecognitionAdapter(it) }
+        resultRecyclerView.adapter = viewAdapter
+
+        // Disable recycler view animation to reduce flickering, otherwise items can move, fade in
+        // and out as the list change
+        resultRecyclerView.itemAnimator = null
+
+        // Attach an observer on the LiveData field of recognitionList
+        // This will notify the recycler view to update every time when a new list is set on the
+        // LiveData field of recognitionList.
+        recogViewModel.recognitionList.observe(viewLifecycleOwner,
+            Observer {
+                viewAdapter?.submitList(it)
+            }
+        )
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -90,32 +134,127 @@ class HomeFragment : Fragment() {
             // Select back camera as a default
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
-            // image analyze to model
-            val imageAnalysis = ImageAnalysis.Builder()
-                    .setTargetResolution(Size(64, 64))
-                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
-                    .build()
-
-            imageAnalysis.setAnalyzer(cameraExecutor, ImageAnalysis.Analyzer { image ->
-                val rotationDegrees = image.imageInfo.rotationDegrees
-                // insert your code here.
-                Log.d("TEST", rotationDegrees.toString())
-                activity?.let { ImageAnalyzerz(it).analyze(image) }
-            })
+            imageAnalyzer = ImageAnalysis.Builder()
+                .setTargetResolution(Size(62, 62))
+                // How the Image Analyser should pipe in input, 1. every frame but drop no frame, or
+                // 2. go to the latest frame and may drop some frame. The default is 2.
+                // STRATEGY_KEEP_ONLY_LATEST. The following line is optional, kept here for clarity
+                .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
+                .build()
+                .also { analysisUseCase: ImageAnalysis ->
+                    activity?.let {
+                        ImageAnalyzer(it) { items ->
+                            // updating the list of recognised objects
+                            recogViewModel.updateData(items)
+                        }
+                    }?.let {
+                        analysisUseCase.setAnalyzer(cameraExecutor,
+                            it
+                        )
+                    }
+                }
 
             try {
                 // Unbind use cases before rebinding
                 cameraProvider.unbindAll()
 
-                // Bind use cases to camera
-                cameraProvider.bindToLifecycle(
-                        this, cameraSelector, preview, imageAnalysis)
+                // Bind use cases to camera - try to bind everything at once and CameraX will find
+                // the best combination.
+                camera = cameraProvider.bindToLifecycle(
+                    this, cameraSelector, preview, imageAnalyzer
+                )
+
+                // Attach the preview to preview view, aka View Finder
+                preview.setSurfaceProvider(viewFinder.surfaceProvider)
 
             } catch(exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }
 
         }, ContextCompat.getMainExecutor(activity))
+    }
+
+    private class ImageAnalyzer(ctx: Context, private val listener: RecognitionListener) :
+        ImageAnalysis.Analyzer {
+
+        // Initializing the flowerModel by lazy so that it runs in the same thread when the process
+        // method is called.
+        private val flowerModel: SignLanguange by lazy{
+            // GPU Acceleration if available
+            val compatList = CompatibilityList()
+
+            val options = if(compatList.isDelegateSupportedOnThisDevice) {
+                Log.d(TAG, "This device is GPU Compatible ")
+                Model.Options.Builder().setDevice(Model.Device.GPU).build()
+            } else {
+                Log.d(TAG, "This device is GPU Incompatible ")
+                Model.Options.Builder().setNumThreads(4).build()
+            }
+
+            // Initialize the Flower Model
+            SignLanguange.newInstance(ctx, options)
+        }
+
+        override fun analyze(imageProxy: ImageProxy) {
+
+            val items = mutableListOf<Recognition>()
+
+            val tfImage = TensorImage.fromBitmap(toBitmap(imageProxy))
+
+            val outputs = flowerModel.process(tfImage)
+                .probabilityAsCategoryList.apply {
+                    sortByDescending { it.score } // Sort with highest confidence first
+                }.take(MAX_RESULT_DISPLAY) // take the top results
+
+            for (output in outputs) {
+                items.add(Recognition(output.label, output.score))
+            }
+
+            // Return the result
+            listener(items.toList())
+
+            // Close the image,this tells CameraX to feed the next image to the analyzer
+            imageProxy.close()
+        }
+
+        /**
+         * Convert Image Proxy to Bitmap
+         */
+        private val yuvToRgbConverter = YuvToRgbConverter(ctx)
+        private lateinit var bitmapBuffer: Bitmap
+        private lateinit var rotationMatrix: Matrix
+
+        @SuppressLint("UnsafeExperimentalUsageError", "UnsafeOptInUsageError")
+        private fun toBitmap(imageProxy: ImageProxy): Bitmap? {
+
+            val image = imageProxy.image ?: return null
+
+            // Initialise Buffer
+            if (!::bitmapBuffer.isInitialized) {
+                // The image rotation and RGB image buffer are initialized only once
+                Log.d(TAG, "Initalise toBitmap()")
+                rotationMatrix = Matrix()
+                rotationMatrix.postRotate(imageProxy.imageInfo.rotationDegrees.toFloat())
+                bitmapBuffer = Bitmap.createBitmap(
+                    imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888
+                )
+            }
+
+            // Pass image to an image analyser
+            yuvToRgbConverter.yuvToRgb(image, bitmapBuffer)
+
+            // Create the Bitmap in the correct orientation
+            return Bitmap.createBitmap(
+                bitmapBuffer,
+                0,
+                0,
+                bitmapBuffer.width,
+                bitmapBuffer.height,
+                rotationMatrix,
+                false
+            )
+        }
+
     }
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
@@ -128,116 +267,5 @@ class HomeFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         cameraExecutor.shutdown()
-    }
-
-    companion object {
-        private const val TAG = "CameraXBasic"
-        private const val REQUEST_CODE_PERMISSIONS = 10
-        private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
-    }
-}
-
-private class ImageAnalyzerz(ctx: Context) : ImageAnalysis.Analyzer {
-    // Our model expects a RGB image, hence the channel size is 3
-    private val channelSize = 3
-
-    // Width of the image that our model expects
-    var inputImageWidth = 64
-
-    // Height of the image that our model expects
-    var inputImageHeight = 64
-
-    // Size of the input buffer size (if your model expects a float input, multiply this with 4)
-    private var modelInputSize = inputImageWidth * inputImageHeight * channelSize
-
-    // Output you get from your model, this is essentially as we saw in netron
-    val resultArray = Array(1) { ByteArray(3) }
-
-    private fun convertBitmapToByteBuffer(bitmap: Bitmap): ByteBuffer {
-        // Specify the size of the byteBuffer
-        val byteBuffer = ByteBuffer.allocateDirect(modelInputSize)
-        byteBuffer.order(ByteOrder.nativeOrder())
-        // Calculate the number of pixels in the image
-        val pixels = IntArray(inputImageWidth * inputImageHeight)
-        bitmap.getPixels(pixels, 0, bitmap.width, 0, 0, bitmap.width, bitmap.height)
-        var pixel = 0
-        // Loop through all the pixels and save them into the buffer
-        for (i in 0 until inputImageWidth) {
-            for (j in 0 until inputImageHeight) {
-                val pixelVal = pixels[pixel++]
-                // Do note that the method to add pixels to byteBuffer is different for quantized models over normal tflite models
-                byteBuffer.put((pixelVal shr 16 and 0xFF).toByte())
-                byteBuffer.put((pixelVal shr 8 and 0xFF).toByte())
-                byteBuffer.put((pixelVal and 0xFF).toByte())
-            }
-        }
-
-        // Recycle the bitmap to save memory
-        bitmap.recycle()
-        return byteBuffer
-    }
-
-    private val signModel: SignLanguage by lazy {
-        SignLanguage.newInstance(ctx)
-    }
-
-    override fun analyze(image: ImageProxy) {
-
-        val imageBitmap = toBitmap(image)
-
-        val resizedImage =
-            imageBitmap?.let { Bitmap.createScaledBitmap(it, inputImageWidth, inputImageHeight, true) }
-
-        val imageBuffer = resizedImage?.let { convertBitmapToByteBuffer(it) }
-//
-        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 64, 64, 3), DataType.FLOAT32)
-//        if (imageBuffer != null) {
-//            inputFeature0.loadBuffer(imageBuffer)
-//        }
-
-        val outputs = signModel.process(inputFeature0)
-                .outputFeature0AsTensorBuffer
-
-        Log.d(TAG, outputs.toString())
-
-        image.close()
-    }
-
-    /**
-     * Convert Image Proxy to Bitmap
-     */
-    private val yuvToRgbConverter = YuvToRgbConverter(ctx)
-    private lateinit var bitmapBuffer: Bitmap
-    private lateinit var rotationMatrix: Matrix
-
-    @SuppressLint("UnsafeExperimentalUsageError")
-    private fun toBitmap(imageProxy: ImageProxy): Bitmap? {
-
-        val image = imageProxy.image ?: return null
-
-        // Initialise Buffer
-        if (!::bitmapBuffer.isInitialized) {
-            // The image rotation and RGB image buffer are initialized only once
-            Log.d(TAG, "Initalise toBitmap()")
-            rotationMatrix = Matrix()
-            rotationMatrix.postRotate(imageProxy.imageInfo.rotationDegrees.toFloat())
-            bitmapBuffer = Bitmap.createBitmap(
-                imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888
-            )
-        }
-
-        // Pass image to an image analyser
-        yuvToRgbConverter.yuvToRgb(image, bitmapBuffer)
-
-        // Create the Bitmap in the correct orientation
-        return Bitmap.createBitmap(
-            bitmapBuffer,
-            0,
-            0,
-            bitmapBuffer.width,
-            bitmapBuffer.height,
-            rotationMatrix,
-            false
-        )
     }
 }
