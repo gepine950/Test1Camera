@@ -3,7 +3,6 @@ package com.example.handcamera1.detection
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView

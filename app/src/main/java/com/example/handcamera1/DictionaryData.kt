@@ -79,6 +79,8 @@ object DictionaryData {
         "Z"
     )
 
+    var apiCheckBool: Boolean = false
+
     val listData: ArrayList<Dictionary>
         get() {
             val list = arrayListOf<Dictionary>()

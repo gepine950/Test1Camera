@@ -8,7 +8,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class DictionaryAdapter(private val listDct: ArrayList<Dictionary> = ArrayList<Dictionary>()) : RecyclerView.Adapter<DictionaryAdapter.AViewHolder>() {
+class DictionaryAdapter(private var listDct: ArrayList<Dictionary> = ArrayList<Dictionary>()) : RecyclerView.Adapter<DictionaryAdapter.AViewHolder>() {
+
+    fun setListDict(listDct: ArrayList<Dictionary>) {
+            this.listDct = listDct
+        this.notifyDataSetChanged()
+    }
 
     inner class AViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvAlphaNum: TextView = itemView.findViewById(R.id.tv_alphanum)
@@ -23,11 +28,17 @@ class DictionaryAdapter(private val listDct: ArrayList<Dictionary> = ArrayList<D
     override fun onBindViewHolder(holder: AViewHolder, position: Int) {
         val dictionary = listDct[position]
 
-        Glide.with(holder.itemView.context)
-            .load(dictionary.photo)
-            .into(holder.imgPhoto)
-
-        holder.tvAlphaNum.text = dictionary.alphaNumeric
+        if (DictionaryData.apiCheckBool == true) {
+            Glide.with(holder.itemView.context)
+                .load(dictionary.photoApi)
+                .into(holder.imgPhoto)
+            holder.tvAlphaNum.text = dictionary.alphaNumericApi
+        } else {
+            Glide.with(holder.itemView.context)
+                .load(dictionary.photo)
+                .into(holder.imgPhoto)
+            holder.tvAlphaNum.text = dictionary.alphaNumeric
+        }
     }
 
     override fun getItemCount(): Int {

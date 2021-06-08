@@ -72,6 +72,7 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:$camerax_version"
     // CameraX View class
     implementation "androidx.camera:camera-view:1.0.0-alpha25"
+    implementation 'com.loopj.android:android-async-http:1.4.11'
     implementation "androidx.activity:activity-ktx:1.1.0"
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
