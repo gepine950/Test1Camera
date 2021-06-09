@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 class DictionaryAdapter(private var listDct: ArrayList<Dictionary> = ArrayList<Dictionary>()) : RecyclerView.Adapter<DictionaryAdapter.AViewHolder>() {
 
     fun setListDict(listDct: ArrayList<Dictionary>) {
-            this.listDct = listDct
+        this.listDct = listDct
         this.notifyDataSetChanged()
     }
 
@@ -28,7 +28,7 @@ class DictionaryAdapter(private var listDct: ArrayList<Dictionary> = ArrayList<D
     override fun onBindViewHolder(holder: AViewHolder, position: Int) {
         val dictionary = listDct[position]
 
-        if (DictionaryData.apiCheckBool == true) {
+        if (DictionaryData.apiCheckBool) {
             Glide.with(holder.itemView.context)
                 .load(dictionary.photoApi)
                 .into(holder.imgPhoto)

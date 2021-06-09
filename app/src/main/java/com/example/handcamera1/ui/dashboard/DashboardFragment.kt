@@ -14,6 +14,7 @@ import com.example.handcamera1.Dictionary
 import com.example.handcamera1.DictionaryAdapter
 import com.example.handcamera1.DictionaryData
 import com.example.handcamera1.R
+import com.example.handcamera1.databinding.FragmentDashboardBinding
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import cz.msebera.android.httpclient.Header
@@ -23,19 +24,22 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     private lateinit var rvDct: RecyclerView
     private var list: ArrayList<Dictionary> = arrayListOf()
     private lateinit var adapter: DictionaryAdapter
+    private var _binding: FragmentDashboardBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        _binding = FragmentDashboardBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvDct = view.findViewById(R.id.rv_kamus)
+        rvDct = binding.rvKamus
         adapter = DictionaryAdapter(list)
         rvDct.setHasFixedSize(true)
         if (DictionaryData.apiCheckBool == false) {
@@ -85,7 +89,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
                     404 -> "$statusCode : Not Found"
                     else -> "$statusCode : ${error.message}"
                 }
-                Toast.makeText(context, "Connection fail,\nusing local data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Connection fail,\nusing local data", Toast.LENGTH_SHORT).show()
                 DictionaryData.apiCheckBool = false
             }
         })
@@ -93,5 +97,6 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     override fun onDestroy() {
         super.onDestroy()
+        _binding = null
     }
 }
