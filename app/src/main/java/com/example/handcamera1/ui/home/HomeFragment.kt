@@ -74,7 +74,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Request camera permissions
-        // Request camera permissions
         if (allPermissionsGranted()) {
             startCamera()
         } else {
@@ -89,13 +88,11 @@ class HomeFragment : Fragment() {
         val viewAdapter = activity?.let { RecognitionAdapter(it) }
         resultRecyclerView.adapter = viewAdapter
 
-        // Disable recycler view animation to reduce flickering, otherwise items can move, fade in
-        // and out as the list change
+        // Disable recycler view animation to reduce flickering, otherwise items can move, fade in and out as the list change
         resultRecyclerView.itemAnimator = null
 
         // Attach an observer on the LiveData field of recognitionList
-        // This will notify the recycler view to update every time when a new list is set on the
-        // LiveData field of recognitionList.
+        // This will notify the recycler view to update every time when a new list is set on the LiveData field of recognitionList.
         recogViewModel.recognitionList.observe(viewLifecycleOwner,
             Observer {
                 viewAdapter?.submitList(it)
@@ -136,9 +133,6 @@ class HomeFragment : Fragment() {
 
             imageAnalyzer = ImageAnalysis.Builder()
                 .setTargetResolution(Size(62, 62))
-                // How the Image Analyser should pipe in input, 1. every frame but drop no frame, or
-                // 2. go to the latest frame and may drop some frame. The default is 2.
-                // STRATEGY_KEEP_ONLY_LATEST. The following line is optional, kept here for clarity
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
                 .build()
                 .also { analysisUseCase: ImageAnalysis ->
@@ -158,8 +152,7 @@ class HomeFragment : Fragment() {
                 // Unbind use cases before rebinding
                 cameraProvider.unbindAll()
 
-                // Bind use cases to camera - try to bind everything at once and CameraX will find
-                // the best combination.
+                // Bind use cases to camera
                 camera = cameraProvider.bindToLifecycle(
                     this, cameraSelector, preview, imageAnalyzer
                 )
@@ -177,10 +170,9 @@ class HomeFragment : Fragment() {
     private class ImageAnalyzer(ctx: Context, private val listener: RecognitionListener) :
         ImageAnalysis.Analyzer {
 
-        // Initializing the flowerModel by lazy so that it runs in the same thread when the process
-        // method is called.
-        private val flowerModel: SignLanguange by lazy{
-            // GPU Acceleration if available
+        // Initializing the signModel by lazy to run in background thread
+        private val signModel: SignLanguange by lazy{
+            // GPU Acceleration
             val compatList = CompatibilityList()
 
             val options = if(compatList.isDelegateSupportedOnThisDevice) {
@@ -191,7 +183,7 @@ class HomeFragment : Fragment() {
                 Model.Options.Builder().setNumThreads(4).build()
             }
 
-            // Initialize the Flower Model
+            // Initialize the Sign Languange Model
             SignLanguange.newInstance(ctx, options)
         }
 
@@ -201,7 +193,7 @@ class HomeFragment : Fragment() {
 
             val tfImage = TensorImage.fromBitmap(toBitmap(imageProxy))
 
-            val outputs = flowerModel.process(tfImage)
+            val outputs = signModel.process(tfImage)
                 .probabilityAsCategoryList.apply {
                     sortByDescending { it.score } // Sort with highest confidence first
                 }.take(MAX_RESULT_DISPLAY) // take the top results

@@ -5,10 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class RecognitionListViewModel : ViewModel() {
-
-    // This is a LiveData field. Choosing this structure because the whole list tend to be updated
-    // at once in ML and not individual elements. Updating this once for the entire list makes
-    // sense.
     private val _recognitionList = MutableLiveData<List<Recognition>>()
     val recognitionList: LiveData<List<Recognition>> = _recognitionList
 

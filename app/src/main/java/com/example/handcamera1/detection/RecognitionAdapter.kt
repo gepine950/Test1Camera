@@ -10,10 +10,7 @@ import com.example.handcamera1.databinding.RecognitionItemBinding
 
 class RecognitionAdapter(private val ctx: Context) :
     ListAdapter<Recognition, RecognitionViewHolder>(RecognitionDiffUtil()) {
-
-    /**
-     * Inflating the ViewHolder with recognition_item layout and data binding
-     */
+//    Inflating the ViewHolder with recognition_item layout and data binding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecognitionViewHolder {
         val inflater = LayoutInflater.from(ctx)
         val binding: RecognitionItemBinding = RecognitionItemBinding.inflate(inflater, parent, false)
@@ -34,15 +31,12 @@ class RecognitionAdapter(private val ctx: Context) :
             return oldItem.confidence == newItem.confidence
         }
     }
-
-
 }
 
 class RecognitionViewHolder(private val binding: RecognitionItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    // Binding all the fields to the view - to see which UI element is bind to which field, check
-    // out layout/recognition_item.xml
+    // Binding all the fields to the view
     fun bindTo(recognition: Recognition) {
         binding.recognitionItem = recognition
         binding.executePendingBindings()
